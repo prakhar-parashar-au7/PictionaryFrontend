@@ -5,7 +5,7 @@ import MeraCanvas from './canvas';
 import react from 'react'
 
 
-const ENDPOINT = "ws://localhost:8080"
+const ENDPOINT = process.env.REACT_APP_BASE_URL
 
   
 let socket;

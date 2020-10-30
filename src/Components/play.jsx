@@ -5,7 +5,7 @@ import MeraCanvas from './canvas';
 import react from 'react'
 
 
-const ENDPOINT = process.env.REACT_APP_BASE_URL
+const ENDPOINT = 'https://infinite-shelf-23652.herokuapp.com/'
 
   
 let socket;

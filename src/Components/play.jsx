@@ -11,7 +11,7 @@ import PlayersInRoom from './playersInRoom'
 
 
 
-const ENDPOINT = 'http://localhost:8080'
+const ENDPOINT = 'https://infinite-shelf-23652.herokuapp.com/'
 
   
 let socket;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
-//import './Join.css';
+import './styles/Join.css';
+import { isWidthDown, TextField } from '@material-ui/core';
+import { Button } from 'react-bootstrap';
 
 export default function SignIn() {
   const [name, setName] = useState('');
@@ -9,18 +10,25 @@ export default function SignIn() {
 
   return (
     <div className="joinOuterContainer">
+
+  
       <div className="joinInnerContainer">
+       <div id="joinText">
         <h1 className="heading">Join</h1>
-        <div>
-          <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+           <h6>or</h6>
+        <h4>  Create a Room </h4>
         </div>
-        <div>
-          <input placeholder="Room" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
+        <div >
+        <TextField style = {{backgroundColor : "white"}} id="outlined-basic" label="Name" variant="outlined" onChange={(event) => setName(event.target.value)}/>
+        </div>
+        <div style={{margin: "20px"}}>
+        <TextField  style = {{backgroundColor : "white"}}  id="outlined-basic" label="Room" variant="outlined" onChange={(event) => setRoom(event.target.value)}/>
         </div>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/play?name=${name}&room=${room}`}>
-          <button className={'button mt-20'} type="submit">Sign In</button>
+          <Button className={'button mt-20'} type="submit">Get In</Button>
         </Link>
       </div>
     </div>
+    
   );
 }
